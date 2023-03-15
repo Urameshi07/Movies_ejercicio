@@ -100,7 +100,7 @@
     <div class="container mx-auto px-4 pt-16">
         <div class="popular-movies miTablaPersonalizada">
             <h2 class="uppercase tracking-wider text-color:orange text-lg font-semibold">Popular Movies</h2>
-            <div class="col">
+            <div class="row">
                 @foreach ($popularMovies as $movie)
                    
                     <div class="col">
@@ -112,7 +112,7 @@
                       <a href="#" class="text-lg mt-2 hover:text-gray:300">{{ $movie['title']}}</a>
                       <div class="flex items-center text-white">
                         
-                          <span class="ml-1">{{ $movie['vote_average']}}</span>
+                          <span class="ml-1">Fecha  de estreno</span>
                           <span class="mx-2">|</span>
                           <span> {{ $movie['release_date']}}</span>
                           
