@@ -22,14 +22,18 @@ En este caso usamos Laravel v8.83.27 y fue un tema tener independencias así com
 
 Para su instalación se recomienda seguir los siguientes pasos:
 
-1.-Clonar este repositorio y entrar dentro de la ruta del mismo (cd..
+1.-Clonar este repositorio y entrar dentro de la ruta del mismo (cd..)
+
 2.-Ajecutar composer install
+
 3.-En su herramienta de base de datos crear tabla movies e importar la estructura y la data del siguiente archivo:
 
 [DB_movies.zip](https://github.com/Urameshi07/Movies_ejercicio/files/11004083/DB_movies.zip)
 
 4.- Ejecutar php artisan migrate:refresh --seed
+
 5.- Iniciar su servidor web (Xammp o MAMP) e ingresar a su localhost
+
 * En caso de requerir key, en la línea de comandos ingresar: php artisan key:generate
 
 
