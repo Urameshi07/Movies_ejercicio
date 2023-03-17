@@ -20,11 +20,6 @@ El API a consumir se llama tasks (ejemplo (http://127.0.0.1:9001/api/tasks))
 <img width="438" alt="image" src="https://user-images.githubusercontent.com/121464138/225977414-18e62efb-b8cc-4342-a147-812f4aaa88e3.png">
 
 
-Realmente fue una prueba interesante ya que en mi experiencia no usamos PHP de manera pura sino a través del framework de SugarCRM el cual ya nos daba algunas herramientas como el lograr obtener el "bean" de todo el objeto a insertar en la tabla y aqui me ha costado algo de trabajo ya que la documentacion no fue muy explicita aparte de algunos videos que encontré trabajaron con versiones inferiores de Laravel.
-
-
-En este caso usamos Laravel v8.83.27 y fue un tema tener independencias así como algunas librerias actualizadas.
-
 Para su instalación se recomienda seguir los siguientes pasos:
 
 1.-Clonar este repositorio y entrar dentro de la ruta del mismo (cd..)
@@ -40,6 +35,11 @@ Para su instalación se recomienda seguir los siguientes pasos:
 5.- Iniciar su servidor web (Xammp o MAMP) e ingresar a su localhost
 
 * En caso de requerir key, en la línea de comandos ingresar: php artisan key:generate
+
+
+Realmente fue una prueba interesante ya que en mi experiencia no usamos PHP de manera pura sino a través del framework de SugarCRM el cual ya nos daba algunas herramientas como el lograr obtener el "bean" de todo el objeto a insertar en la tabla y aqui me ha costado algo de trabajo ya que la documentacion no fue muy explicita aparte de algunos videos que encontré trabajaron con versiones inferiores de Laravel.
+
+En este caso usamos Laravel v8.83.27 y fue un tema tener independencias así como algunas librerias actualizadas. Aún asi muchas gracias por la oportunidad, aprendimos mucho en estos días.
 
 
 
