@@ -36,12 +36,9 @@ class taskcontroller extends Controller
         $pelicula->fecha_fin_p=$request->date('Y-m-d', strtotime($request->input('fecha_fin_p')));
         $pelicula->status_p=$request->input('status_p');
         
-        dd($request); 
         $pelicula->save();
 
-        return \response($pelicula);
-
-       
+        return \response($pelicula);  
         
     }
 

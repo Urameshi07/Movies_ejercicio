@@ -30,9 +30,11 @@ Route::get('/admin', function () {
 
  use App\Http\Controllers\MoviesController; // MoviesController is controller name
 
-Route::get('index',[MoviesController::class, 'index']);
+//Route::get('index',[MoviesController::class, 'index']);
 
-Route::get('/home/create', 'PeliculaController@create');
+
 Route::post('/articulo', 'PeliculaController@store');
-
 Route::get('/movies/{movie}', 'MoviesController@show')->name('movies.show');
+Route::get('/home', [MoviesController::class, 'index']); //Listado peliculas de tmdb
+Route::get('/home/create', 'PeliculaController@create');//formulario peliculas
+//Route::get('/create', [MoviesController::class, 'index']); 

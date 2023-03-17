@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/tasks', 'taskcontroller');
-    Route::post('/tasks', 'taskcontroller@store');
+    Route::post('/task', 'taskcontroller@store');
     Route::get('/tasks', 'taskcontroller@store');
 
 

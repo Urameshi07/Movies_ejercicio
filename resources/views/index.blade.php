@@ -106,8 +106,10 @@
 <div class='parent'>
     <br>
     <div id="parent">
+      <button class="btn btn-outline-info" action="/create" type="submit">+ Añadir Película</button>
         <div class="popular-movies parent">
             <h2 class="uppercase tracking-wider text-warning">Películas Recientes</h2>
+            
             <div class="grid grid-cols-4 gap-16">
                 @foreach ($popularMovies as $movie)
                    
