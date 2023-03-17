@@ -15,6 +15,11 @@ Lamentablemente no logré hacer bien el routing para dicha accion teniendo el fo
 
 Para el control de las peticiones se hace mediante el controlador taskcontroller y probando el api tasks se realizaron pruebas del API teniendo como inconveniente que no logré "cachar" los valores del json y por ende si genera el insert en la tabla peliculas pero dichos valores van nulos.
 
+El API a consumir se llama tasks (ejemplo (http://127.0.0.1:9001/api/tasks))
+
+<img width="438" alt="image" src="https://user-images.githubusercontent.com/121464138/225977414-18e62efb-b8cc-4342-a147-812f4aaa88e3.png">
+
+
 Realmente fue una prueba interesante ya que en mi experiencia no usamos PHP de manera pura sino a través del framework de SugarCRM el cual ya nos daba algunas herramientas como el lograr obtener el "bean" de todo el objeto a insertar en la tabla y aqui me ha costado algo de trabajo ya que la documentacion no fue muy explicita aparte de algunos videos que encontré trabajaron con versiones inferiores de Laravel.
 
 
