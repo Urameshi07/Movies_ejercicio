@@ -32,5 +32,7 @@ Route::get('/admin', function () {
 
 Route::get('index',[MoviesController::class, 'index']);
 
+Route::get('/home/create', 'PeliculaController@create');
+Route::post('/articulo', 'PeliculaController@store');
 
 Route::get('/movies/{movie}', 'MoviesController@show')->name('movies.show');

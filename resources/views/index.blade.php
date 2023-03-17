@@ -9,11 +9,14 @@
     <title></title>
     <link rel="icon" href="{{asset('img/icon-60x60.png')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css">
 <style>
     body{
         background: url("https://cdn.pixabay.com/photo/2017/07/13/23/11/cinema-2502213_1280.jpg");
         backdrop-filter: blur(10px);
+        background-position:center;
         background-attachment: fixed;
+        background-size:cover;
     }
     @font-face {
         font-family:'Lato-Black' ;
@@ -23,16 +26,20 @@
         color:#fffff;
         font-size:100px;
     }
-    .miTablaPersonalizada th{
-  width: 130px;
-  overflow: auto;
+    .parent {
+    display: flex;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
+   
 </style>
 
 
 </head>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<body>
+<body><!--NavBar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <img src="{{asset('img/icon-60x60.png')}}" alt="" width="40px">
@@ -94,16 +101,16 @@
     </div>
   </div>
 </nav>
-<div class='container'>
+<!--Container peliculas home -->
+
+<div class='parent'>
     <br>
-    <h1 class="titulo1">MoviesTest</h1>
-    <div class="container mx-auto px-4 pt-16">
-        <div class="popular-movies miTablaPersonalizada">
-            <h2 class="uppercase tracking-wider text-color:orange text-lg font-semibold">Popular Movies</h2>
-            <div class="row">
+    <div id="parent">
+        <div class="popular-movies parent">
+            <h2 class="uppercase tracking-wider text-warning">Películas Recientes</h2>
+            <div class="grid grid-cols-4 gap-16">
                 @foreach ($popularMovies as $movie)
                    
-                    <div class="col">
                       <a href="{{ route('movies.show', $movie['id'] )}}">
                         <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$movie['poster_path']}}" alt="poster" 
                         class="hover:opacity-75 transition ease-ni-out duration-150">
@@ -115,15 +122,16 @@
                           <span class="ml-1">Fecha  de estreno</span>
                           <span class="mx-2">|</span>
                           <span> {{ $movie['release_date']}}</span>
-                          
+                    </div>      
                 @endforeach
 
             </div>
+          </div> 
         </div> <!-- end pouplar-movies -->
     </div>
 
 </div>
-</h1>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

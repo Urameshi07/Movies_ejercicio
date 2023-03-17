@@ -16,16 +16,13 @@ class CreatePeliculasTable extends Migration
         Schema::create('peliculas2', function (Blueprint $table) {
             $table->id();
             $table->string ('titulo_p','155');
-            $table-> text('descripcion_p');
             $table-> text('director_p');
             $table->string ('duracion_p','100');
             $table->text ('imagen_p','100');
-            $table->string ('categoria_p','100');
-            $table->string ('trailer_p','100');
-            $table->timestamps('fecha_est_p');
-            $table->timestamps('fecha_fin_p');
+            $table->string ('clasificacion','100');
+            $table->dateTime('fecha_est_p');
+            $table->dateTime('fecha_fin_p');
             $table->text ('status_p','255');
-            $table->timestamps();
         });
     }
 
